@@ -60,9 +60,3 @@ src/
     index.ts                # Interfaces Article, CartItem
 ```
 
-## Deploy opcional
-
-```bash
-# Vercel
-vercel deploy
-```
