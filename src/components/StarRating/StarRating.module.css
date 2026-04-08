@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.star {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.full  { color: var(--color-star); }
+.half  { color: var(--color-star); opacity: 0.6; }
+.empty { color: var(--color-border); }
+
+.value {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-left: 4px;
+}

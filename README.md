@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ecommerce — Prueba Técnica Frontend React
 
-## Getting Started
+Aplicación de e-commerce con listado de productos, detalle y carrito de compras.
 
-First, run the development server:
+## Stack
+
+- **Next.js** (App Router) — SSR / SSG
+- **React 19** + **TypeScript**
+- **CSS Modules** — sin librerías de componentes
+
+## Requisitos previos
+
+- Node.js >= 18
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build de producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    layout.tsx              # Root layout
+    page.tsx                # Página "/"
+    products/
+      [id]/
+        page.tsx            # Página "/products/:id"
+  components/
+    Header/                 # Barra de navegación
+    ArticleCard/            # Card individual de producto
+    ArticleList/            # Grid con buscador
+    ArticleDetail/          # Vista de detalle
+    Cart/                   # Drawer lateral del carrito
+    StarRating/             # Estrellas de calificación
+  context/
+    CartContext.tsx          # Estado global del carrito
+    FavoritesContext.tsx     # Estado global de favoritos
+    Providers.tsx            # Provider de los componentes.
+  data/
+    articles.ts             # Mock de datos + funciones getArticles / getArticleById
+  types/
+    index.ts                # Interfaces Article, CartItem
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy opcional
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Vercel
+vercel deploy
+```

@@ -1,0 +1,147 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.backBtn {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0.3rem 0;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.backBtn:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  background-color: var(--color-surface);
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.imageWrapper {
+  position: relative;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.addBtn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addBtn:hover { background-color: var(--color-primary-dark); }
+
+.favBtn {
+  padding: 0.65rem 1.5rem;
+  background: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.favBtn:hover,
+.favActive {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.shipping {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.shippingBadge {
+  font-size: 0.85rem;
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.returnLabel {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .imageWrapper { min-height: 240px; }
+  .title { font-size: 1.3rem; }
+  .price { font-size: 1.6rem; }
+}
